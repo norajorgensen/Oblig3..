@@ -1,0 +1,20 @@
+# Ordbok med rom og antall seter
+rom = {
+    "Rom A": 45,
+    "Rom B": 60,
+    "Rom C": 30,
+    "Rom D": 100
+}
+
+# 1. Slå opp hvor mange seter det er i et spesifikt rom (f.eks. "Rom B")
+romnavn = "Rom B"
+seter_i_rom_b = rom.get(romnavn)
+print(f"Antall seter i {romnavn}: {seter_i_rom_b}")
+
+# 2. Endre kapasiteten til et spesifikt rom, slik at det har 10 flere seter
+rom["Rom A"] += 10  # Legger til 10 seter i "Rom A"
+print(f"Ny kapasitet for Rom A: {rom['Rom A']}")
+
+# 3. Finn alle rom som har minst 50 seter
+rom_med_minst_50_seter = [navn for navn, seter in rom.items() if seter >= 50]
+print(f"Rom med minst 50 seter: {rom_med_minst_50_seter}")
